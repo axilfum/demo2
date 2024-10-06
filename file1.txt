@@ -1,0 +1,40 @@
+int main(void) {
+    int a, x=0, y=0;
+    char yonalish;
+
+    printf("Yo'nalishlar:\n");
+    printf("s-shimol ");
+    printf(" j-janub\t");
+    printf(" q-sharq\t");
+    printf(" g -g'arb\t");
+    printf("\nYo'nalishdan birini tanlang:\n");
+    scanf("%c",&yonalish);
+
+    printf("\nRobot bajarishi mumkin bolgan kamandalr:\n");
+    printf("0-harakatni davom qilish");
+    printf("\t1-chapga burilish");
+    printf("\t2-o'nga burilish");
+    printf("\nKamandalardan birini tanlang:\n");
+    scanf("%d", &a);
+
+    switch (yonalish) {
+        case 's':
+            y+=a;
+            break;
+        case 'j':
+            y-=a;
+            break;
+        case 'q':
+            x+=a;
+            break;
+        case 'g':
+            x-=a;
+            break;
+        default:
+            printf("Noto'g'ri yo'nalish kiritdingiz!");
+            return 1;
+    }
+
+    printf("Robotning hozirgi koordinatalari: (%d, %d)\n", x, y);
+    return 0;
+}
