@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    int plus = 0;
+
+    while (i <= 10) {
+        plus += i;
+        i++;
+    }
+
+    printf("1 dan 10 gacha bo'lgan sonlarning yig'indisi: %d\n", plus);
+
+    return 0;
+}
